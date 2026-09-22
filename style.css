@@ -1,4 +1,4 @@
-/* generalt */
+/*********************************************** generalt *********************************************/
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +15,12 @@ img {
   height: auto;
   display: block;
 }
-/**** header style ********/
+/******** header style *****************/
 header {
   background-color: #ff9494;
   color: white;
   display: flex;
-  justify-content: space-between; /* Skubber logo til venstre og menu til højre */
+  justify-content: space-between; 
   align-items: center;
   padding: 20px;
 }
@@ -56,7 +56,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/********* Kategorier **************/
+/********************************************* Kategorier *******************************************************/
 
 .category_list_container {
   display: grid;
@@ -120,7 +120,7 @@ nav a:hover {
   letter-spacing: 3px;
 }
 
-/********* cards style **************/
+/********************************************* Produktliste *****************************************************/
 
 .card {
   position: relative;
@@ -152,7 +152,7 @@ nav a:hover {
   padding: 5px 10px;
 }
 
-/********* Produkt side **************/
+/*********************************** Produkt side *******************************************************/
 
 .product {
   display: grid;
@@ -232,7 +232,7 @@ nav a:hover {
 
 
 
-/******* footer **********/
+/*************************************************** footer ****************************************************/
 footer {
     background-color: #ff9494;
     padding: 40px 60px;
