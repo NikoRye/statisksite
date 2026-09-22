@@ -152,8 +152,10 @@ nav a:hover {
 /********************************************* Produktliste *****************************************************/
 
 .card {
-  position: relative;
   display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  position: relative;
 }
 
 .card img {
@@ -164,12 +166,17 @@ nav a:hover {
 }
 
 .soldout_tag {
+  visibility: absolute;
   position: absolute;
   top: 10px;
   left: 10px;
   background-color: black;
   color: white;
   padding: 5px 10px;
+}
+.soldout img {
+  opacity: 0.5;
+ 
 }
 
 .sale_tag {
