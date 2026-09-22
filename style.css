@@ -1,0 +1,243 @@
+/* generalt */
+main {
+  display: grid;
+  gap: 20px;
+  background-color: #ffeded;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/**** header style ********/
+header {
+  background-color: #ff9494;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Skubber logo til venstre og menu til højre */
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff4f4f;
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ff4f4f;
+  text-decoration: underline;
+}
+
+/********* Kategorier **************/
+
+.category_list_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.category_list_container a {
+  text-decoration: none;
+  color: #401d1d;
+}
+
+.category_card {
+  min-height: 80px;
+  border: 1px solid #1e1e1e;
+  padding: 30px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  background-color: #c35f5f;
+  position: relative;
+  overflow: hidden;
+}
+
+.category_card::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: 1px solid rgba(88, 29, 29, 0.4);
+  transition: all 0.3s ease;
+}
+
+.category_card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category_card:hover {
+  background-color: #4f1919;
+  color: #e8e0d3;
+  transform: translateY(-5px);
+}
+
+.category_card:hover::before {
+  border-color: rgba(232, 224, 211, 0.5);
+}
+
+.category_card:hover h2 {
+  letter-spacing: 3px;
+}
+
+/********* cards style **************/
+
+.card {
+  position: relative;
+  display: grid;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.soldout_tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+.sale_tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+}
+
+/********* Produkt side **************/
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.product_image img {
+  width: 100%;
+  display: block;
+}
+
+.product_info {
+  padding: 20px;
+}
+
+.product_brand {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.product_info h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.product_price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.product_description {
+  line-height: 1.6;
+  margin: 30px 0;
+}
+
+/********* Størrelser **************/
+
+.sizes {
+  margin-bottom: 30px;
+}
+
+.sizes button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/********* Køb-knap **************/
+
+.buy_button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.buy_button:hover {
+  background-color: #333;
+}
+
+/* Grid for product cards */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 140px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ensure card fills its grid cell */
+.card {
+  width: 100%;
+}
