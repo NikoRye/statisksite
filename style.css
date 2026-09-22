@@ -1,4 +1,9 @@
 /* generalt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 main {
   display: grid;
   gap: 20px;
@@ -225,19 +230,34 @@ nav a:hover {
   padding: 0 20px;
 }
 
-@media (max-width: 900px) {
-  .card-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+
+/******* footer **********/
+footer {
+    background-color: #ff9494;
+    padding: 40px 60px;
 }
 
-@media (max-width: 600px) {
-  .card-list {
-    grid-template-columns: 1fr;
-  }
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Ensure card fills its grid cell */
-.card {
-  width: 100%;
+footer nav {
+    display: flex;
+    gap: 25px;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
 }
